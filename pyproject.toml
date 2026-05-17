@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "local_rag"
+version = "0.1.0"
+description = ""
+authors = ["sileye ba"]
+license = "bsd"
+readme = "README.md"
+
+[[tool.poetry.packages]]
+include = "local_rag"
+from = "python"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.3.2"
+matplotlib = "^3.10.6"
+pandas = "^2.3.2"
+ipykernel = "^6.30.1"
+reportlab = "^4.5.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+generate_pdf = "local_rag.cli.generate_pdf:main"
